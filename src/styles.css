@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+    --clr-bg: #edf2f7;
+    --clr-card: #ffffff;
+    --clr-text: #1f2937;
+    --clr-main: #ff6b00;
+    --clr-blue: #0066cc;
+    --clr-red: #e63946;
+    --clr-gray: #94a3b8;
+    --radius: 14px;
+    --shadow: 0 6px 14px rgba(0, 0, 0, .08);
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+}
+
+.bar {
+    display: flex;
+    gap: 28px;
+    padding: 12px 32px;
+    width: max-content;
+    margin: 36px auto 0;
+    background: var(--clr-card);
+    border-radius: 50px;
+    box-shadow: var(--shadow);
+}
+
+.link {
+    color: var(--clr-gray);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.link:hover,
+.link.active {
+    color: var(--clr-main);
+}
+
+.link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--clr-main);
+}
+
+main {
+    max-width: 1000px;
+    margin: 28px auto 60px;
+    background: var(--clr-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 34px 38px 48px;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--clr-main);
+}
+
+select {
+    margin-top: 6px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #fafbfc;
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 26px;
+}
+
+thead {
+    background: var(--clr-main);
+    color: #fff;
+}
+
+th,
+td {
+    padding: 10px 14px;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background: #f8fafc;
+}
+
+tbody tr:hover {
+    background: #eaf1ff;
+    cursor: pointer;
+}
+
+.leader-row td {
+    color: var(--clr-blue);
+    font-weight: 700;
+}
+
+.bottom-row td {
+    color: var(--clr-red);
+}
+
+.subcard {
+    margin-top: 28px;
+    padding: 24px 28px;
+    border-radius: var(--radius);
+    background: linear-gradient(140deg, #ffffff 0%, #f5f9ff 100%);
+    border: 1px solid #d6e4f1;
+    box-shadow: var(--shadow);
+}
+
+.subcard ul {
+    padding-left: 22px;
+    line-height: 1.6;
+}
+
+@media (max-width:720px) {
+    .bar {
+        flex-wrap: wrap;
+        gap: 18px;
+        padding: 12px 22px;
+    }
+
+    main {
+        padding: 28px 24px 42px;
+    }
+}
